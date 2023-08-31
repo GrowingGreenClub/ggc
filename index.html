@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/adressbar.ico.ico">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+  <!-- Terms and Conditions Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <h2 class="tscs">WARNING</h2><br>
+      <p class="tscstext">- Before Entering Our Website, Please Be Advised That This Platform Is Exclusively Intended For Individuals Above The Age Of 18. We Kindly Request That You Take Note Of The Legal Age Requirement, Which Is 18, Before Making Any Purchases. It Is Important To Understand That If You Proceed With A Purchase And Do Not Meet The Age Criteria, You Will Not Be Eligible For A Refund.</p>
+      <label>
+       <center> <input class="checkbox" type="checkbox" id="agreeCheckbox"> I Agree To The Terms And Conditions
+      </label>
+      <button id="agreeButton" disabled>Agree</button>
+    </div>
+  </div>
+
+
+  <script>
+
+// Get the modal element
+var modal = document.getElementById("myModal");
+
+// Get the checkbox and button elements
+var agreeCheckbox = document.getElementById("agreeCheckbox");
+var agreeButton = document.getElementById("agreeButton");
+
+// Show the modal
+modal.style.display = "block";
+
+// Disable the button by default
+agreeButton.disabled = true;
+
+// Enable the button if the checkbox is checked
+agreeCheckbox.addEventListener("change", function() {
+  agreeButton.disabled = !agreeCheckbox.checked;
+});
+
+// Close the modal and redirect if the user agrees
+agreeButton.addEventListener("click", function() {
+  modal.style.display = "none";
+  window.location.href = "home.html";
+});
+
+// Prevent scrolling of the background content when the modal is open
+document.body.style.overflow = "hidden";
+
+
+  </script>
+
+
+
+</body>
+</html>
